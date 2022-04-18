@@ -4,8 +4,12 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.github.com',
-  apiKey: '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'
+  //apiUrl: 'https://api.github.com',
+  //apiKey: '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'
+  clientSecret: 'your client secret',
+    clientId: 'your client id'
+
+
 };
 
 /*

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Users} from './users';
 import {Repo} from './repo';
@@ -28,12 +29,12 @@ export class DataService {
 
     let promise = new Promise<void>((resolve,reject) =>{
       this.http.get<ApiResponse>(userUrl).toPromise().then
-      (response => {
+      ((response: Users) => {
         this.users = response;
 
         resolve()
       },
-      error=>{
+        (error: any)=>{
         this.users.name = "Oops! We can't find a match!"
 
         reject(error)
@@ -53,12 +54,12 @@ export class DataService {
       let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
       let promise = new Promise<void>((resolve,reject) =>{
         this.http.get<ApiResponse>(repoUrl).toPromise().then
-        (response => {
+        ((response: Repo) => {
             this.repos = response;
             console.log(this.repos);
           resolve()
         },
-        error=>{
+          (error: any)=>{
           this.repos.name = "Oops! We can't find a match!"
   
           reject(error)
