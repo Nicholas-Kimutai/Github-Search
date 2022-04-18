@@ -17,7 +17,15 @@ export class UsersComponent implements OnInit {
     this.DataService.getProfile(username).then((success)=>{
      this.user = this.DataService.users;
     },
-    
+    (error)=>{
+      console.log(error)
+    });
+    this.DataService.getRepo(username).then((success)=>{
+     this.repos = this.DataService.repos;
+    },
+    (error)=>{
+      console.log(error)
+    });
   }
 
 
