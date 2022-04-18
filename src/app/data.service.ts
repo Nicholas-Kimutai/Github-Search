@@ -29,16 +29,41 @@ export class DataService {
     let promise = new Promise<void>((resolve,reject) =>{
       this.http.get<ApiResponse>(userUrl).toPromise().then
       (response => {
-        this.user = response;
+        this.users = response;
 
         resolve()
       },
       error=>{
-        this.user.name = "We couldn’t find any users matching the name given"
+        this.users.name = "We couldn’t find any users matching the name given"
 
         reject(error)
         })
       })
       return promise;
     }
+    getRepo(username:string){
+      interface ApiResponse{
+        name:string;
+        html_url:string;
+        description:string;
+        language:string;
+        created_at:Date
+        
+      }
+      let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
+      let promise = new Promise<void>((resolve,reject) =>{
+        this.http.get<ApiResponse>(repoUrl).toPromise().then
+        (response => {
+            this.repos = response;
+            console.log(this.repos);
+          resolve()
+        },
+        error=>{
+          this.repos.name = "We couldn’t find any repositories matching the name given"
+  
+          reject(error)
+          })
+        })
+        return promise;
+      }
 }
