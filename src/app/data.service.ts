@@ -34,7 +34,7 @@ export class DataService {
         resolve()
       },
       error=>{
-        this.users.name = "We couldn’t find any users matching the name given"
+        this.users.name = "Oops! We can't find a match!"
 
         reject(error)
         })
@@ -59,7 +59,7 @@ export class DataService {
           resolve()
         },
         error=>{
-          this.repos.name = "We couldn’t find any repositories matching the name given"
+          this.repos.name = "Oops! We can't find a match!"
   
           reject(error)
           })
