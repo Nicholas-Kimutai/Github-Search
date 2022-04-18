@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <app-search (searchResult) = "searchUser($event)"></app-search>
+    <div class="row mt-5">
+        <div class="col-md-5">
+            <div class="row">
+                <img src="{{users.avatar_url}}" class="rounded-circle img-fluid" alt="Avatar">
+            </div>
+            <div class="row mb-5">
+                <h2 class="mt-5 mb-4">{{users.name}}</h2>
+        
+                <div class="col-md-2">
+                    <p>Followers: {{users.followers}}</p>
+                </div>
+                <div class="col-md-2">
+                    <p>Following: {{users.following}}</p>
+                </div>
+                <div class="col-md-2">
+                    <p>Repositories: {{users.public_repos}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
