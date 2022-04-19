@@ -1,27 +1,43 @@
-# GithubSearch
+# GITHUB SEARCH
+### By: Nicholas Kimutai
+## Table of Content
+-   [Description](#description)
+-   [Installation Requirement](#installation)
+-   [Technology Used](#technologies)
+-   [Authors Info](#author-info)
+-   [License](#License)
+## Description
+This is a landing page for Delani Studio showcasing who they are, their services, portfolio and how to get in-touch with them.
+## Installation
+### Requirements
+-   Either a computer,phone,tablet or an Ipad
+-   An access to the Internet
+### 1. Local Repository
+-   Make sure you have a stable internet to have the ability to clone the repository.
+-   Type the following command in your terminal to clone this repository
+```
+git clone https://github.com/Nicholas-Kimutai/Github-Search.git
+```
+If you are using SSH, use the following command
+```
+git@github.com:Nicholas-Kimutai/Github-Search.git```
+When you run the commands successfully, you should have a local version of this repository.
+### 2. Online Repository
+-   Make sure you have a stable internet for forking this repository.
+-   According to the license, you can fork this project. You need ibkt click on the forking icon and it will be added as one of your repositories
+Happy coding!
+## Technologies
+* HTML5
+* CSS3
+* Bootstrap5
+* Javascript
+* Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
-## Development server
+## Author Info
+-   Linkedin - [Nicholas Kimutai](https://www.linkedin.com/in/nicholas-kimutai-1b629a127/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## License
+[MIT License](./LICENSE)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Copyright (c) 2022 Nicholas Kimutai
