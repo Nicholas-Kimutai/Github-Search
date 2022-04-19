@@ -1,4 +1,4 @@
-# GITHUB SEARCH
+# GITHUB-SEARCH
 ### By: Nicholas Kimutai
 ## Table of Content
 -   [Description](#description)
@@ -7,7 +7,8 @@
 -   [Authors Info](#author-info)
 -   [License](#License)
 ## Description
-This is a landing page for Delani Studio showcasing who they are, their services, portfolio and how to get in-touch with them.
+This is a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
+
 ## Installation
 ### Requirements
 -   Either a computer,phone,tablet or an Ipad
@@ -20,7 +21,8 @@ git clone https://github.com/Nicholas-Kimutai/Github-Search.git
 ```
 If you are using SSH, use the following command
 ```
-git@github.com:Nicholas-Kimutai/Github-Search.git```
+git clone git@github.com:Nicholas-Kimutai/Github-Search.git
+```
 When you run the commands successfully, you should have a local version of this repository.
 ### 2. Online Repository
 -   Make sure you have a stable internet for forking this repository.
