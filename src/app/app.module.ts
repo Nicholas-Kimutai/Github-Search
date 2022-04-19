@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     UsersComponent,
-    HomeComponent
+    HomeComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
