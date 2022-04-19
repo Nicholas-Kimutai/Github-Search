@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { DateCountPipe } from './date-count.pipe';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DateCountPipe } from './date-count.pipe';
     SearchComponent,
     UsersComponent,
     HomeComponent,
-    DateCountPipe
+    DateCountPipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
