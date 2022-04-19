@@ -9,18 +9,18 @@ import { Users } from '../users';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  user!:Users;
+  users!:Users;
   repos:any;
 
   constructor(public DataService:DataService) { }
-  searchUser(username:string){
-    this.DataService.getProfile(username).then((success)=>{
-     this.user = this.DataService.users;
+  searchUsers(usersname:string){
+    this.DataService.getProfile(usersname).then((success)=>{
+     this.users = this.DataService.users;
     },
     (error)=>{
       console.log(error)
     });
-    this.DataService.getRepo(username).then((success)=>{
+    this.DataService.getRepo(usersname).then((success)=>{
      this.repos = this.DataService.repos;
     },
     (error)=>{
@@ -30,7 +30,7 @@ export class UsersComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.searchUser('Nicholas-Kimutai');
+    this.searchUsers('Nicholas-Kimutai');
   }
 
 }

@@ -11,12 +11,12 @@ import {Repo} from './repo';
 export class DataService {
   repos!: Repo;
   users!:Users;
-
-  constructor() {
+ 
+  constructor(private http:HttpClient) {
     this.users = new Users("",0,0,0,"","","");
     this.repos = new Repo("","","","",new Date());
    }
-   getProfile(username:string){
+   getProfile(usersname:string){
     interface ApiResponse{
         name:string;
         login: string;
@@ -25,10 +25,10 @@ export class DataService {
         followers:number;
         following:number;
         public_repos:number;
-    } let userUrl = 'https://api.github.com/users/'+username+'?client_id='+environment.clientId + "&client_secret="+environment.clientSecret;
+    } let usersUrl = 'https://api.github.com/users/'+usersname+'?client_id='+environment.clientId + "&client_secret="+environment.clientSecret;
 
     let promise = new Promise<void>((resolve,reject) =>{
-      this.http.get<ApiResponse>(userUrl).toPromise().then
+      this.http.get<ApiResponse>(usersUrl).toPromise().then
       ((response: Users) => {
         this.users = response;
 
@@ -42,7 +42,7 @@ export class DataService {
       })
       return promise;
     }
-    getRepo(username:string){
+    getRepo(usersname:string){
       interface ApiResponse{
         name:string;
         html_url:string;
@@ -51,7 +51,7 @@ export class DataService {
         created_at:Date
         
       }
-      let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
+      let repoUrl = 'https://api.github.com/users/'+usersname+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
       let promise = new Promise<void>((resolve,reject) =>{
         this.http.get<ApiResponse>(repoUrl).toPromise().then
         ((response: Repo) => {

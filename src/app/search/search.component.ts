@@ -9,12 +9,12 @@ import { Users } from '../users';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  public userQuery!: string;
+  public usersQuery!: string;
   @Output() searchResult = new EventEmitter<any>()
 
   constructor() { }
-  searchUser(){
-    this.searchResult.emit(this.userQuery);
+  searchUsers(){
+    this.searchResult.emit(this.usersQuery);
   }
 
   ngOnInit(): void {
